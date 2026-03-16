@@ -17,7 +17,7 @@ type ViaCEPResponse struct {
 	Gia         string `json:"gia"`
 	Ddd         string `json:"ddd"`
 	Siafi       string `json:"siafi"`
-	Erro        bool   `json:"erro"`
+	Erro        any    `json:"erro"`
 }
 
 type WeatherAPIResponse struct {

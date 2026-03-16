@@ -48,8 +48,13 @@ func (c *DefaultWeatherClient) GetLocationByZipCode(zipcode string) (string, err
 		return "", err
 	}
 
-	if viaCep.Erro {
-		return "", ErrZipCodeNotFound
+	if viaCep.Erro != nil {
+		if b, ok := viaCep.Erro.(bool); ok && b {
+			return "", ErrZipCodeNotFound
+		}
+		if s, ok := viaCep.Erro.(string); ok && (s == "true" || s == "1") {
+			return "", ErrZipCodeNotFound
+		}
 	}
 
 	return viaCep.Localidade, nil
