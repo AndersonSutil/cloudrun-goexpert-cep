@@ -4,7 +4,7 @@ Este sistema recebe um CEP, identifica a cidade correspondente e retorna o clima
 
 ## URL de Acesso (Google Cloud Run)
 A aplicação está implantada no Google Cloud Run e pode ser acessada através da seguinte URL:
-**[https://weather-api-524282631878.us-central1.run.app/weather?zipcode=84350000](https://cloudrun-weather-api-qax7333zha-uc.a.run.app/weather?zipcode=01001000)**
+**[https://weather-api-794580508182.us-central1.run.app/weather?zipcode=84350000](https://weather-api-794580508182.us-central1.run.app/weather?zipcode=84350000)**
 
 *(Substitua `01001000` pelo CEP desejado)*
 
